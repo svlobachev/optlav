@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:optlav/widgets/pages/parts/pass_button.dart';
 
 class LearningPage1 extends StatelessWidget {
   const LearningPage1({Key? key}) : super(key: key);
@@ -9,18 +10,15 @@ class LearningPage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wrap(
       children: [
-
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
                   height: 50,
                 ),
-
                 SizedBox(
                   width: 400,
                   child: Image.asset('assets/img/learning1.png'),
@@ -44,29 +42,14 @@ class LearningPage1 extends StatelessWidget {
                   child: const Text('Далее'),
                 ),
                 const SizedBox(height: 45),
-
               ],
             ),
           ],
         ),
         Row(
-          mainAxisAlignment:  MainAxisAlignment.end,
-          children: [
-            TextButton(
-              onPressed: () {},
-              child: Text("Пропустить"),
-              style: TextButton.styleFrom(
-                minimumSize: Size(300, 50),
-                primary: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontStyle: FontStyle.normal),
-              ),
-            ),
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: const [
+            MyPassButton(),
           ],
         )
       ],

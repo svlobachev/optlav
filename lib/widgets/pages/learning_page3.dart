@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:optlav/widgets/pages/parts/back_button.dart';
+import 'package:optlav/widgets/pages/parts/pass_button.dart';
 
 class LearningPage3 extends StatelessWidget {
   const LearningPage3({Key? key}) : super(key: key);
@@ -51,37 +53,9 @@ class LearningPage3 extends StatelessWidget {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            TextButton(
-              onPressed: () => Get.toNamed('/learning_page2'),
-              child: Text("Назад"),
-              style: TextButton.styleFrom(
-                minimumSize: Size(50, 50),
-                primary: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontStyle: FontStyle.normal),
-              ),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text("Пропустить"),
-              style: TextButton.styleFrom(
-                minimumSize: Size(50, 50),
-                primary: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontStyle: FontStyle.normal),
-              ),
-            ),
+          children: const [
+            MyBackButton(),
+            MyPassButton(),
           ],
         ),
       ],
